@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SAMUH | Weekly Production Plan</title>
+<style>
+:root{--navy:#101b32;--blue:#2357d8;--bg:#f4f7fb;--ink:#19243a;--muted:#64748b;--line:#e3e9f2;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial}
+header{background:linear-gradient(115deg,#101b32,#1b3767);color:#fff;padding:26px clamp(16px,4vw,44px)}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:#b7c9f4;font-weight:700}.head{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}h1{font-size:clamp(23px,3vw,34px);margin:5px 0}.sub{color:#d3def3;margin:0}.pill{border:1px solid #7187b7;border-radius:999px;padding:8px 12px;color:#e6edff;font-size:12px}
+main{max-width:1500px;margin:auto;padding:24px clamp(12px,3vw,32px) 50px}.stats{display:grid;grid-template-columns:repeat(5,minmax(130px,1fr));gap:12px;margin-bottom:18px}.stat,.panel{background:var(--white);border:1px solid var(--line);border-radius:15px;box-shadow:0 4px 14px #152c5008}.stat{padding:16px}.stat .label{font-size:12px;color:var(--muted)}.stat .num{font-size:25px;font-weight:750;margin-top:5px}.stat .foot{font-size:11px;color:var(--muted);margin-top:4px}
+.panel{padding:18px;margin-bottom:16px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}.filters{display:flex;gap:8px;flex-wrap:wrap}select,input,button{font:inherit;border:1px solid #d7dfeb;border-radius:9px;padding:10px 12px;background:#fff;color:var(--ink)}input{min-width:220px}button{cursor:pointer;font-weight:650}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 14px}.section-head h2{font-size:17px;margin:0}.muted{color:var(--muted);font-size:12px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:11px}table{border-collapse:collapse;width:100%;min-width:850px;background:#fff}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th{background:#f1f5fb;color:#52627a;font-size:11px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}th:first-child,td:first-child{text-align:left;min-width:300px}td:first-child{font-weight:600}tr:last-child td{border-bottom:0}.unit-row td{background:#eaf0fc;color:#183a83;font-weight:800;text-align:left!important}.total{font-weight:800;background:#f7f9fc}.zero{color:#a3adbd}.week-cell{font-variant-numeric:tabular-nums}.bar{height:5px;background:#e9eef7;border-radius:99px;overflow:hidden;margin-top:5px}.bar span{display:block;height:100%;background:#4673e8;border-radius:99px}.empty{padding:26px;text-align:center;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:11px;padding:12px}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child{grid-column:span 2}}@media(max-width:500px){.stats{grid-template-columns:1fr 1fr}.stat .num{font-size:21px}input{min-width:100%;width:100%}.toolbar,.filters{width:100%}.filters>*{flex:1}}
+</style></head><body>
+<header><div class="head"><div><div class="eyebrow">SAMUH · Operations</div><h1>Weekly Production Plan</h1><p class="sub">Unit-wise production visibility · October–November 2026</p></div><div class="pill">SOURCE: WEEKWISE UNIT WISE PLAN</div></div></header>
+<main><section class="stats" id="stats"></section>
+<section class="panel"><div class="toolbar"><div><div class="section-head"><h2>Plan overview</h2></div><div class="muted">Filter by unit, week or product. Blank Excel cells are treated as zero for display.</div></div><div class="filters"><select id="unitFilter"><option value="all">All production units</option></select><select id="weekFilter"><option value="all">All weeks</option></select><input id="search" placeholder="Search product name…"><button id="reset">Reset</button><button class="primary" id="export">Export CSV</button></div></div></section>
+<section class="panel"><div class="section-head"><h2>Unit-wise plan</h2><span class="muted" id="resultCount"></span></div><div id="tableArea"></div></section>
+<footer>Data loaded from the Excel sheet “WEEKWISE UNIT WISE PLAN” only. This template does not read or modify the monthly plan.</footer></main>
+<script>
+fetch('./weekly-data.json').then(r=>r.json()).then(data=>{
+const unitF=document.querySelector('#unitFilter'),weekF=document.querySelector('#weekFilter'),search=document.querySelector('#search');
+data.units.forEach((u,i)=>{let o=document.createElement('option');o.value=String(i);o.textContent=u.name;unitF.append(o)});
+data.weeks.forEach((w,i)=>{let o=document.createElement('option');o.value=String(i);o.textContent=w.key+' · '+w.label;weekF.append(o)});
+const n=v=>Number(v||0),fmt=v=>n(v).toLocaleString('en-IN',{maximumFractionDigits:1});
+function render(){
+const ui=unitF.value,wi=weekF.value,q=search.value.toLowerCase().trim();
+const chosen=data.units.map((u,i)=>({...u,index:i})).filter(u=>(ui==='all'||String(u.index)===ui));
+let rows=[], visibleTotal=0, productCount=0;
+chosen.forEach(u=>{let ps=u.products.filter(p=>p.name.toLowerCase().includes(q));if(ps.length){rows.push({type:'unit',unit:u});ps.forEach(p=>{rows.push({type:'product',unit:u,p});productCount++;visibleTotal+=wi==='all'?n(p.total):n(p.weeks[Number(wi)])})}});
+const totals=data.weeks.map((w,i)=>chosen.reduce((sum,u)=>sum+u.products.filter(p=>p.name.toLowerCase().includes(q)).reduce((s,p)=>s+n(p.weeks[i]),0),0));
+const allTotal=chosen.reduce((s,u)=>s+u.products.filter(p=>p.name.toLowerCase().includes(q)).reduce((a,p)=>a+(wi==='all'?n(p.total):n(p.weeks[Number(wi)])),0),0);
+document.querySelector('#stats').innerHTML=[
+['Planned quantity',fmt(allTotal),wi==='all'?'Across selected units':'Selected week only'],
+['Production units',chosen.length,'Units in workbook'],
+['Products shown',productCount,'Matching search'],
+['W1 · 10–17 Oct',fmt(totals[0]),'Weekly total'],
+['W2 · 18–24 Oct',fmt(totals[1]),'Weekly total']
+].map(x=>`<div class="stat"><div class="label">${x[0]}</div><div class="num">${x[1]}</div><div class="foot">${x[2]}</div></div>`).join('');
+let html='<div class="table-wrap"><table><thead><tr><th>Production unit / product</th>'+data.weeks.filter((w,i)=>wi==='all'||String(i)===wi).map(w=>`<th>${w.key}<br>${w.label}</th>`).join('')+'<th>Total</th></tr></thead><tbody>';
+rows.forEach(r=>{if(r.type==='unit'){html+=`<tr class="unit-row"><td colspan="${(wi==='all'?4:1)+2}">${r.unit.name}</td></tr>`}else{html+=`<tr><td>${r.p.name}</td>`+data.weeks.map((w,i)=>({w,i})).filter(x=>wi==='all'||String(x.i)===wi).map(({i})=>`<td class="week-cell ${n(r.p.weeks[i])===0?'zero':''}">${fmt(r.p.weeks[i])}</td>`).join('')+`<td class="total">${fmt(r.p.total)}</td></tr>`}});
+if(!productCount)html+='<tr><td colspan="6" class="empty">No products match these filters.</td></tr>';
+html+='</tbody></table></div>';
+document.querySelector('#tableArea').innerHTML=html;
+document.querySelector('#resultCount').textContent=`${productCount} products · ${fmt(allTotal)} planned`;
+}
+function csv(){
+const ui=unitF.value, q=search.value.toLowerCase().trim();let lines=[['Unit','Product',...data.weeks.map(w=>w.key+' '+w.label),'Total']];
+data.units.forEach((u,i)=>{if(ui!=='all'&&String(i)!==ui)return;u.products.filter(p=>p.name.toLowerCase().includes(q)).forEach(p=>lines.push([u.name,p.name,...p.weeks.map(n),p.total]))});
+const content=lines.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\\r\\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type:'text/csv;charset=utf-8;'}));a.download='samuh-weekly-production-plan.csv';a.click();URL.revokeObjectURL(a.href)
+}
+[unitF,weekF].forEach(el=>el.addEventListener('change',render));search.addEventListener('input',render);document.querySelector('#reset').addEventListener('click',()=>{unitF.value='all';weekF.value='all';search.value='';render()});document.querySelector('#export').addEventListener('click',csv);render();
+}).catch(()=>document.querySelector('#tableArea').innerHTML='<div class="empty">Could not load weekly-data.json. Keep both files in the same project folder.</div>');
+</script></body></html>

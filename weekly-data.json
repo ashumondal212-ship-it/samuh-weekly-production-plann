@@ -1,0 +1,851 @@
+{
+  "title": "SAMUH Production Control Tower",
+  "source_sheet": "WEEKWISE UNIT WISE PLAN",
+  "weeks": [
+    {
+      "key": "W1",
+      "label": "10\u201317 Oct"
+    },
+    {
+      "key": "W2",
+      "label": "18\u201324 Oct"
+    },
+    {
+      "key": "W3",
+      "label": "25\u201331 Oct"
+    },
+    {
+      "key": "W4",
+      "label": "1\u20139 Nov"
+    }
+  ],
+  "units": [
+    {
+      "name": "RATTAN OIL MILLS (207 tons)",
+      "products": [
+        {
+          "name": "Samuh Chocolate Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Beat it Bite it Chocolate Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Orange Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Beat it! Bite it! Orange Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 70g",
+          "weeks": [
+            3.0,
+            3.0,
+            null,
+            4.0
+          ],
+          "total": 10.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 35 g",
+          "weeks": [
+            17.0,
+            17.0,
+            null,
+            17.0
+          ],
+          "total": 51.0
+        },
+        {
+          "name": "Samuh Butter Cashew Biscuit 60g",
+          "weeks": [
+            null,
+            4.0,
+            null,
+            8.0
+          ],
+          "total": 12.0
+        },
+        {
+          "name": "Samuh Butter Cashew 30 g",
+          "weeks": [
+            null,
+            16.0,
+            null,
+            20.0
+          ],
+          "total": 36.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 70 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 35 g",
+          "weeks": [
+            null,
+            25.0,
+            null,
+            null
+          ],
+          "total": 25.0
+        },
+        {
+          "name": "Samuh Bourbon Biscuit 60 g",
+          "weeks": [
+            null,
+            5.0,
+            10.0,
+            10.0
+          ],
+          "total": 25.0
+        },
+        {
+          "name": "Samuh Digestive Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            18.0
+          ],
+          "total": 18.0
+        },
+        {
+          "name": "Samuh Sweet Salt Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Salty Sweety Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Kalonji Bliss 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Zeera Biscuit 35 g",
+          "weeks": [
+            null,
+            15.0,
+            15.0,
+            null
+          ],
+          "total": 30.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 75g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        }
+      ]
+    },
+    {
+      "name": "STRAIGHT LINE (58 tons)",
+      "products": [
+        {
+          "name": "Samuh Chocolate Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Beat it Bite it Chocolate Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Orange Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Beat it! Bite it! Orange Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew Biscuit 60g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew 30 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 70 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Bourbon Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Digestive Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Sweet Salt Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            14.0,
+            null
+          ],
+          "total": 14.0
+        },
+        {
+          "name": "Samuh Salty Sweety Biscuit 32 g",
+          "weeks": [
+            20.0,
+            null,
+            10.0,
+            10.0
+          ],
+          "total": 40.0
+        },
+        {
+          "name": "Samuh Butter Kalonji Bliss 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Zeera Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 75g",
+          "weeks": [
+            null,
+            null,
+            4.0,
+            null
+          ],
+          "total": 4.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        }
+      ]
+    },
+    {
+      "name": "SWG (174 tons)",
+      "products": [
+        {
+          "name": "Samuh Chocolate Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            3.0,
+            null
+          ],
+          "total": 3.0
+        },
+        {
+          "name": "Samuh Beat it Bite it Chocolate Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            20.0,
+            30.0,
+            null
+          ],
+          "total": 50.0
+        },
+        {
+          "name": "Samuh Orange Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            7.0,
+            null
+          ],
+          "total": 7.0
+        },
+        {
+          "name": "Samuh Beat it! Bite it! Orange Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            24.0,
+            null
+          ],
+          "total": 24.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 65g",
+          "weeks": [
+            10.0,
+            null,
+            null,
+            10.0
+          ],
+          "total": 20.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 32 g",
+          "weeks": [
+            30.0,
+            null,
+            null,
+            30.0
+          ],
+          "total": 60.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew Biscuit 60g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew 30 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 70 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Bourbon Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Digestive Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Sweet Salt Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Salty Sweety Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Kalonji Bliss 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Zeera Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 75g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Marie Biscuit 35 g",
+          "weeks": [
+            10.0,
+            null,
+            null,
+            null
+          ],
+          "total": 10.0
+        }
+      ]
+    },
+    {
+      "name": "VEETADAY (40tons)",
+      "products": [
+        {
+          "name": "Samuh Chocolate Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Beat it Bite it Chocolate Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Orange Cream Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Beat it! Bite it! Orange Cream Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cookies Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 70g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Coconut Cookies Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew Biscuit 60g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Cashew 30 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 70 g",
+          "weeks": [
+            6.0,
+            12.0,
+            12.0,
+            null
+          ],
+          "total": 30.0
+        },
+        {
+          "name": "Samuh Milky Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Bourbon Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Digestive Biscuit 60 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Sweet Salt Biscuit 65g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Salty Sweety Biscuit 32 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": 0.0
+        },
+        {
+          "name": "Samuh Butter Kalonji Bliss 65g",
+          "weeks": [
+            null,
+            5.0,
+            5.0,
+            null
+          ],
+          "total": 10.0
+        },
+        {
+          "name": "Samuh Zeera Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Marie Biscuit 75g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        },
+        {
+          "name": "Samuh Marie Biscuit 35 g",
+          "weeks": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "total": null
+        }
+      ]
+    }
+  ],
+  "grand_week_totals": [
+    96.0,
+    122.0,
+    134.0,
+    127.0
+  ],
+  "grand_total": 479.0
+}
